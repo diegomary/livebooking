@@ -1,0 +1,261 @@
+﻿textarea.txtresult {
+    background-color: cornflowerblue;
+    color: yellow;
+    border-style: solid;
+    border-top-width: thin;
+    border-radius: 14px 20px 20px 14px;
+    font-size: small;
+    font-family: Verdana;
+    height: 80px;
+    width: 310px;
+    overflow: visible;
+}
+
+
+input.inputname {
+    background-color: #FFFF00;
+    font-family: Verdana;
+    width: 14em;
+    font-size: x-small;
+    border-radius: 7px 10px 10px 7px;
+}
+
+
+
+input.inputemail {
+    background-color: #FFFF00;
+    font-family: Verdana;
+    width: 14em;
+    font-size: x-small;
+    border-radius: 7px 10px 10px 7px;
+}
+
+
+
+input.btnlanguages {
+    margin: 8px;
+    font-size: 16px;
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    width: 150px;
+    height: 40px;
+    border-radius: 7px 10px 10px 7px;
+}
+
+    input.btnlanguages.mouseout {
+        background-color: #00FF00;
+    }
+
+    input.btnlanguages.mousehover {
+        background-color: #FFFFFF;
+    }
+/********************************************************************************************/
+input.btnvirtualization {
+    margin: 8px;
+    font-size: 16px;
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px 10px 10px 7px;
+}
+
+    input.btnvirtualization.mouseout {
+        background-color: #FFFF00;
+    }
+
+    input.btnvirtualization.mousehover {
+        background-color: #FF0000;
+    }
+/********************************************************************************************/
+input.btnhtmlcss {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    color: #FFFFFF;
+    border-radius: 7px 10px 10px 7px;
+}
+
+    input.btnhtmlcss.mouseout {
+        background-color: #003399;
+    }
+
+    input.btnhtmlcss.mousehover {
+        background-color: #13A6EC;
+    }
+/********************************************************************************************/
+input.btndatabase {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    color: #FFFFFF;
+    border-radius: 7px 10px 10px 7px;
+}
+
+    input.btndatabase.mouseout {
+        background-color: #6600CC;
+    }
+
+    input.btndatabase.mousehover {
+        background-color: #339933;
+    }
+
+/********************************************************************************************/
+input.btnoperatingsys {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    color: #FFFFFF;
+    border-radius: 7px 10px 10px 7px;
+}
+
+    input.btnoperatingsys.mouseout {
+        background-color: #FF6699;
+    }
+
+    input.btnoperatingsys.mousehover {
+        background-color: #666699;
+    }
+
+/********************************************************************************************/
+input.btnide {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    color: #00CC66;
+    border-radius: 7px 10px 10px 7px;
+}
+
+
+    input.btnide.mouseout {
+        background-color: #660066;
+    }
+
+    input.btnide.mousehover {
+        background-color: #00FFFF;
+    }
+
+
+input.btngraphics {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px 10px 10px 7px;
+}
+
+
+    input.btngraphics.mouseout {
+        background-color: White;
+        color: Black;
+    }
+
+    input.btngraphics.mousehover {
+        background-color: Black;
+        color: White;
+    }
+
+
+
+input.btnoffice {
+    border-style: double;
+    font-family: Verdana;
+    font-size: x-small;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px 10px 10px 7px;
+}
+
+
+    input.btnoffice.mouseout {
+        background-color: Silver;
+        color: Olive;
+    }
+
+    input.btnoffice.mousehover {
+        background-color: Black;
+        color: White;
+    }
+
+
+input.subeva {
+    font-family: Verdana;
+    font-size: xx-small;
+    float: left;
+    margin-left: 40px;
+    width: 50px;
+    height: 25px;
+    font-weight: lighter;
+}
+
+
+    input.subeva.mouseout {
+        background-color: #efb16e;
+    }
+
+    input.subeva.mousehover {
+        background-color: #339933;
+    }
+
+
+input.btnreset {
+    float: right;
+    font-family: Verdana;
+    font-weight: lighter;
+}
+
+
+    input.btnreset.mouseout {
+        background-color: #a3c3ef;
+    }
+
+    input.btnreset.mousehover {
+        background-color: #FF0000;
+    }
+
+#div_validation {
+    float: right;
+    width: 200px;
+    height: 93px;
+    margin-top: 2px;
+    border-style: solid;
+    border-width: thin;
+    display: block;
+}
+
+
+th {
+    text-align: left;
+}
+
+
+
+.editor-label {
+    font-family: Verdana;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+
+.editor-field {
+    font-family: Verdana;
+    font-size: x-small;
+    color: Red;
+}
+
+
+span.evaluator {
+    display: inline-block; /* this allow the span to behave as a fixed column so the width must be specified  */
+    white-space: nowrap;
+}

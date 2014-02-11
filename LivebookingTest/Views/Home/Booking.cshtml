@@ -1,0 +1,212 @@
+﻿@using LivebookingTest
+@using LivebookingTest.Database
+@using System.Collections.ObjectModel
+@using LivebookingTest.Models
+@model   LivebookingTest.Models.DinerDetails
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="../Content/themes/sunny/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../JqueryScripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../JqueryScripts/jquery-ui-1.8.24.min.js"></script>
+    <script type="text/javascript" src="../JqueryScripts/jquery.unobtrusive.js"></script>
+    <script type="text/javascript" src="../JqueryScripts/jquery.validate.js"></script>
+    <script type="text/javascript" src="../JqueryScripts/jquery.validate.unobtrusive.js"></script>
+    <script type="text/javascript">
+        //************************************************************************************************************************
+        $().ready(function () {
+            $("#diningdate").datepicker({
+                showOn: "button",
+                buttonImage: "../Images/calendar.gif",
+                buttonImageOnly: true,
+                dateFormat: "mm/dd/yy",
+                beforeShow: function () { $(".ui-datepicker").css('font-size', 12) }
+            });
+            var ct = 0;
+            while (true) {
+                var t = document.getElementById(ct + "bookingdate");
+                if (t == null) break;
+                $("#" + t.id).datepicker({
+                    showOn: "button",
+                    buttonImage: "../Images/calendar.gif",
+                    buttonImageOnly: true,
+                    dateFormat: "mm/dd/yy",
+                    beforeShow: function () { $(".ui-datepicker").css('font-size', 12) }
+                });
+                ct++;
+            }
+        });
+        //*************************************************************************************************************************   
+        function UpdateDinerStatus(value, id) {
+            var ar = new Array();
+            ar[0] = document.getElementById("firstname" + id).value;
+            ar[1] = lastname = document.getElementById("lastname" + id).value;
+            ar[2] = value;
+            $.ajax({
+                type: 'POST',
+                dataType: "json",
+                url: '@Url.Action("UpdateStatus", "Home")',
+                data: JSON.stringify(ar)
+            })
+        }
+        function UpdateCoversNumber(value, id) {
+            var ar = new Array();
+            ar[0] = document.getElementById("firstname" + id).value;
+            ar[1] = lastname = document.getElementById("lastname" + id).value;
+            ar[2] = value;
+            $.ajax({
+                type: 'POST',
+                dataType: "json",
+                url: '@Url.Action("UpdateCovers", "Home")',
+                data: JSON.stringify(ar)
+            })
+        }
+    </script>
+    <title>Booking</title>
+</head>
+<body style="font-size: 4px; background-color: Silver">
+    <br />
+    <br />
+    <br />
+    <div style="width: 650px; margin: 0 auto;">
+        <div style="vertical-align: middle; border-color: Red; background-image: url(../Images/bground.png); width: 650px; vertical-align: middle; border-radius: 9px;">
+            @using (Html.BeginForm("Booking", "Home"))
+            {  <table style="width: 650px; border-color: Red; border-radius: 9px; border-bottom: solid; border-top: solid; border-left: solid; border-right: solid; font-family: Verdana; font-size: 12px">
+                <tr>
+                    <td style="width: 120px;">
+                        @Html.LabelFor(model => model.FirstName)
+                    </td>
+                    <td style="width: 100px;">
+                        @Html.EditorFor(model => model.FirstName)
+
+                    </td>
+                    <td style="width: 380px;">
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.LastName)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.LastName)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.DiningDate)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.DiningDate, new { @readonly = true, Id = "diningdate", Style = "width:75px" })
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.DiningDate)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Covers)
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(model => model.Covers, new SelectList(DinerDetails.Coversnum, DinerDetails.Coversnum[0]), new { Style = "width:60px" })
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.Covers)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.PhoneNumber)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.Email)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.Email)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Book" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>     
+            }
+        </div>
+        <br />
+    </div>
+    <div style="margin: 0 auto; background-image: url(../Images/res.jpg); border-bottom: solid; border-top: solid; border-left: solid; border-right: solid; border-color: White; color: Black; width: 850px; height: 150px; overflow: auto; vertical-align: middle;">
+        <table style="border-color: White; width: 800px; font-family: Verdana; font-size: 12px">
+            <tr style="height: 8px;"></tr>
+            <tr style="color: red; font-weight: bold">
+                <td>First name</td>
+                <td>Last name</td>
+                <td></td>
+                <td>Dining date</td>
+                <td>Covers</td>
+                <td>Phone</td>
+                <td>Email</td>
+                <td>Diner status</td>
+            </tr>
+            <tr style="height: 8px;"></tr>
+            @{
+                if (ViewBag.AllDiners != null)
+                {
+                    int n = 0;
+                    foreach (DinerDetails dt in (ObservableCollection<DinerDetails>)ViewBag.AllDiners)
+                    {
+                <tr>
+                    @using (Html.BeginForm("UpdateData", "Home"))
+                    {
+                           
+                        <td style="font-size: small">@Html.TextBoxFor(m => dt.FirstName, new { Id = "firstname", @readonly = true, Style = "width:70px" })</td>
+                        <td style="font-size: small">@Html.TextBoxFor(m => dt.LastName, new { Id = "lastname", @readonly = true, Style = "width:70px" })</td>
+                        <script type="text/javascript">
+                            //  var temp = "@n";
+                            var e = document.getElementById("firstname");
+                            e.id = "firstname" + "@n";
+                                var e1 = document.getElementById("lastname");
+                                e1.id = "lastname" + "@n";
+                        </script>
+                        <td style="font-size: small">
+                            <input type="submit" value="Update" /></td> 
+                        <td style="font-size: small">@Html.TextBoxFor(m => dt.DiningDate, new { Id = n + "bookingdate", @readonly = true, Style = "width:70px", })</td>
+                        <td style="font-size: small">@Html.DropDownListFor(m => dt.Covers, new SelectList(DinerDetails.Coversnum, dt.Covers), new { Id = n, onchange = "UpdateCoversNumber(this.value, this.id)", Style = "width:50px" })</td>
+                        <td style="font-size: small">@Html.DisplayFor(m => dt.PhoneNumber)</td>   
+                        <td style="font-size: small">@Html.TextBoxFor(m => dt.Email)</td>                    
+                        <td style="font-size: small">@Html.DropDownListFor(m => dt.DinerStatus, new SelectList(DinerDetails.DinerStatusViewModel.DinerOptions, "Value", "Value", dt.DinerStatus), new { Id = n, onchange = "UpdateDinerStatus(this.value, this.id)" })</td>
+                    }
+                </tr>     
+                    n++;
+                    }
+                }
+            }
+        </table>
+    </div>
+</body>
+</html>

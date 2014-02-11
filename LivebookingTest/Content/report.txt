@@ -1,0 +1,103 @@
+Data:     01/05/2013 18.06.35
+Name:     sasa  email: sasasa
+
+Evaluation report:
+
+Languages
+
+Javascript                -> 0
+C++                       -> 0
+C++.NET (cli)             -> 0
+C#                        -> 0
+VB.Net                    -> 0
+Asp.Net                   -> 0
+MVC3                      -> 0
+Ajax                      -> 0
+VB6                       -> 0
+WPF                       -> 0
+Silverlight 4/5           -> 0
+
+Partial Score for Languages -> 0
+
+Virtualization
+
+VMW Player                -> 0
+VirtualBox                -> 0
+Virtual PC                -> 0
+Microsoft Hiper V         -> 0
+VMW Workstation           -> 0
+VMW Server                -> 0
+
+Partial Score for Virtualization -> 0
+
+Html Css
+
+HTML                      -> 0
+XML                       -> 0
+XPath                     -> 0
+Css                       -> 0
+JSON                      -> 0
+
+Partial Score for Html Css -> 0
+
+Database RDBMS
+
+MsSql Server              -> 0
+Oracle 10/11g             -> 0
+MySql                     -> 0
+Ms. Access                -> 0
+DB4                       -> 0
+
+Partial Score for Database RDBMS -> 0
+
+Operating Systems
+
+Windows 7                 -> 0
+Windows 8                 -> 0
+Server 2008 R2            -> 0
+Windows XP                -> 0
+Linux                     -> 0
+Unix                      -> 0
+Dos                       -> 0
+
+Partial Score for Operating Systems -> 0
+
+Ide for development
+
+V.Studio 2011             -> 0
+V.Studio 2010             -> 0
+V.Studio 2008             -> 0
+Eclipse                   -> 0
+V.Web Developer           -> 0
+V.Studio Express          -> 0
+
+Partial Score for Ide for development -> 0
+
+Graphics and CAD
+
+Adobe Photoshop CS        -> 0
+Microsoft Expression      -> 0
+Adobe Dreamweaver         -> 0
+Adobe Illustrator         -> 0
+Paint Shop Pro            -> 0
+Office Picture Man.       -> 0
+Microsoft Publisher       -> 0
+Microsoft PowerPoint      -> 0
+
+Partial Score for Graphics and CAD -> 0
+
+Microsoft Office
+
+Word 2007/10              -> 0
+Excell 2007/2010          -> 0
+PowerPoint 2007/2010      -> 0
+Outlook 2007/2010         -> 0
+Publisher 2007/2010       -> 0
+Office Tools              -> 0
+Access 2007/2010          -> 0
+InfoPath 2007/2010        -> 0
+
+Partial Score for Microsoft Office -> 0
+
+
+Total Score for SASA -> 0
