@@ -105,6 +105,7 @@ namespace LivebookingTest.Controllers
             //message.DeliveryNotificationOptions = DeliveryNotificationOptions.OnSuccess;
             message.Priority = MailPriority.High;
             mailClient.Send(message);
+            //This is a test
 
         }
 
