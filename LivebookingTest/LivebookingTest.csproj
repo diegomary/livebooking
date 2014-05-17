@@ -301,6 +301,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mary.txt" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
